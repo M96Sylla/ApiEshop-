@@ -53,10 +53,10 @@ spec:
     spec:
       containers:
       - name: database 
-        image: mrstaniislas/group-997959_database
+        image: syllanfadocker/group-997959_database
         env:
             - name: MYSQL_ROOT_PASSWORD
-              value: "645272"
+              value: "password"
         ports:
         - containerPort: 3306
           name: database
@@ -84,14 +84,14 @@ spec:
     spec:
       containers:
         - name: api
-          image: mrstaniislas/group-997959_api
+          image: syllanfadocker/group-997959_api
           env:
             - name: DB_HOST
               value: DB_IP
             - name: DB_USERNAME
               value: root
             - name: DB_PASSWORD
-              value: "645272"
+              value: "password"
           ports:
             - containerPort: 8000
           volumes:
@@ -116,7 +116,7 @@ spec:
     spec:
       containers:
         - name: front
-          image: mrstaniislas/group-997959_front
+          image: syllanfadocker/group-997959_front
           ports:
             - containerPort: 4200
           volumes:
